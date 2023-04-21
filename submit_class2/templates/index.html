@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>時間割登ろくん2</title>
+  </head>
+  <body>
+    <h1>時間割登ろくん2</h1>
+    あなたの時間割を楽々google calenderに登録</p>
+    注意 このアプリは性質上、googleの認可が必要です。許可は最後のアクセスから30分以内に削除されます。
+    信頼できないボタンを押した後、もう一度お使いになりたくなった場合は、ログアウトボタンを押してからご利用ください。</p>
+    <form action="/" method="POST">
+      <label for="a">クリップボックスから張り付け:</label>
+      <input type="text" name="a" id="a" required>
+      <label for="b">春秋の選択:</label>
+      <select name="b" id="b" required>
+        <option value="0">春学期</option>
+        <option value="1">秋学期</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="/revoke">このページが信頼できず、許可を取り消したい時</a><br>
+    <a href="/clear">ログアウトしたいとき</a>
+    <p>このサイトは早稲田の学生を対象にしています</p>
+    <h2>使い方</h2>
+    <p>1:このサイトをブックマークに登録</p>
+    <p>2:urlを、次のスクリプトに書き換える</p>
+    <input type="text"value='javascript:var global=window; global.COPY_TO_CLIPBOARD=global.COPY_TO_CLIPBOARD||{}; global.COPY_TO_CLIPBOARD.copyToClipboard=function(){ var copyFrom = document.createElement("textarea"); copyFrom.textContent = document.body.outerHTML; var bodyElm = document.getElementsByTagName("body")[0]; bodyElm.appendChild(copyFrom); copyFrom.select(); document.execCommand("copy"); bodyElm.removeChild(copyFrom)}; global.COPY_TO_CLIPBOARD.copyToClipboard();'></input>
+    <p>3:スマホの場合</p>
+    <p>mywasedaの履修登録にアクセス。履修登録画面で、検索バーに「わせコマ」と打ち込み、ブックマークから先ほどのコードを入れる</p>
+    <p>3:pcの場合</p>
+    <p>mywasedaの履修登録にアクセス。履修登録画面に移動。urlを元のブラウザのタブに映してから、検索バーに「わせコマ」と打ち込みブックマークから先ほどのコードを入れる</p>
+    <p>3.5:初回の場合(ほとんどの場合そうだと思いますが、)、空で一回submiボタンを押して、許可を作ってください。</p>
+    <p>4:クリップボックスから張り付けというフォームに、コピーされた情報を張り付け、春学期、秋学期を選択肢、submitボタンを押す。</p>
+    <h2>このアプリについて</h2>
+    このアプリはアプリ「わせコマ」に非常につよいインスパイアを受けて作成されたものです。そのため、動作方式などの面で酷似している面があります。問題がありましたら、rintarohida1@gmail.comにご一報いただけると幸いです。<br>
+    ソースコードはこちらからご確認いただけます。
+  </body>
+</html>
